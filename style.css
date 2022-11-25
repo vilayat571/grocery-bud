@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #f1f5f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  width: 500px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0.1px 0.1px 15px 0.1px rgb(173, 173, 173);
+  border-radius: 5px;
+  padding: 30px 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(27, 44, 100);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  height: 36px;
+  border: 1.5px solid rgb(109, 109, 109);
+  text-indent: 10px;
+  border-radius: 1px;
+  outline: none;
+}
+
+button {
+  height: 36px;
+  width: 100px;
+  border: none;
+  background-color: rgb(27, 44, 100);
+  color: white;
+  border-radius: 1px;
+  outline: none;
+  cursor: pointer;
+}
+
+.list {
+  width: 80%;
+  height: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.item {
+  width: 100%;
+  background-color: rgb(27, 44, 100);
+  color: white;
+  text-align: left;
+  padding: 6px 10px;
+  text-transform: capitalize;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ikon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+}
+
+.ikon i {
+  cursor: pointer;
+}
