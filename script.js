@@ -4,8 +4,7 @@ let list = document.querySelector('.list');
 let add = document.getElementById('add');
 
 form.addEventListener('submit',(e) => {
-
-    e.preventDefault();
+    e.stopPropagation();
 
     // create trash element
     let trash = document.createElement('i');
@@ -39,7 +38,9 @@ form.addEventListener('submit',(e) => {
 
     // remove item
     var remove = document.querySelector('#trash');
-    remove.addEventListener('click',() => {
+    remove.addEventListener('click',(e) => {
+
+        e.stopPropagation()
 
         var question = confirm('are you sure');
 
@@ -55,25 +56,25 @@ form.addEventListener('submit',(e) => {
 
     // edit item
     var redraft = document.querySelector('#edit');
-    redraft.addEventListener('click',() => {
+    redraft.addEventListener('click',(e) => {
+
+        e.stopPropagation();
 
         input.value = redraft.parentElement.parentElement.textContent;
 
     });
 
-    // copy-edit element
-    add.addEventListener('click',() => {
+    add.addEventListener('click',(e) => {
 
-        var question = confirm('are you sure');
-
-        if (question) {
-            remove.parentElement.parentElement.remove();
-        }
-
-        else {
-            return false
-        }
+        e.stopPropagation();
+        remove.parentElement.parentElement.remove();
 
     });
 
 });
+
+
+
+
+
+// some errors
