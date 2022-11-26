@@ -104,3 +104,7 @@ button {
 .ikon i {
   cursor: pointer;
 }
+
+.fa-trash{
+   color: red;
+}

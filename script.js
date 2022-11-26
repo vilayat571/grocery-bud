@@ -3,28 +3,16 @@ let input = document.querySelector('input');
 let list = document.querySelector('.list');
 let add = document.getElementById('add');
 
+let trash=`<i id='#trash' class="fa fa-trash" aria-hidden="true"></i>`;
+
 form.addEventListener('submit',(e) => {
-    e.stopPropagation();
 
-    // create trash element
-    let trash = document.createElement('i');
-    trash.setAttribute('aria-hidden','true');
-    trash.setAttribute('class','fa fa-trash');
-    trash.setAttribute('id','trash');
+    e.preventDefault();
 
-    // create edit element
-    let edit = document.createElement('i');
-    edit.setAttribute('aria-hidden','true');
-    edit.setAttribute('class','fas fa-edit');
-    edit.setAttribute('id','edit');
-
-    // create parent node
     let div = document.createElement('span');
     div.setAttribute('class','ikon');
-    div.appendChild(trash)
-    div.appendChild(edit)
+    div.innerHTML=trash;
 
-    // append elements
     let p = document.createElement('p');
     p.setAttribute('title','list item');
     p.classList.add('item');
@@ -36,45 +24,17 @@ form.addEventListener('submit',(e) => {
     list.appendChild(p);
     input.value = '';
 
-    // remove item
-    var remove = document.querySelector('#trash');
-    remove.addEventListener('click',(e) => {
-
-        e.stopPropagation()
-
-        var question = confirm('are you sure');
-
-        if (question) {
-            remove.parentElement.parentElement.remove();
-        }
-
-        else {
-            return false
-        }
-
-    });
-
-    // edit item
-    var redraft = document.querySelector('#edit');
-    redraft.addEventListener('click',(e) => {
-
-        e.stopPropagation();
-
-        input.value = redraft.parentElement.parentElement.textContent;
-
-    });
-
-    add.addEventListener('click',(e) => {
-
-        e.stopPropagation();
-        remove.parentElement.parentElement.remove();
-
-    });
-
 });
 
 
 
+var remove = document.querySelector('.ikon').firstElementChild
+
+remove && remove.addEventListener('click',()=>{
+    alert('trash')
+})
+
+console.log(removeEventListener);
 
 
-// some errors
+// son derse bax yeniden yaz
